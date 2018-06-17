@@ -18,6 +18,14 @@ To be able to perform such a study, different sorts of data from different sourc
 
 As mentioned above, the social media of interest of this blog is the well known forum site named Reddit. Reddit is 'a source for what's new and popular on the web'. It is a site were the users provide the conent and decide via voting what is good or bad.<sup>[1](#reddit-footnote)</sup>
 
+The nice thing about Reddit is that there exist some sort of order in the content available. Every different topic can be subcategorized into so-called 'subreddits'. These are different parts of the website dedicated to one general topic. Like for example the different cryptocurrencies like Bitcoin or Ethereum. 
+
+There exist different subreddits dedicated to those cryptocurrencies and some even have daily discussions. These daily discussions are opened on each new day and contain discussions on topics related to that day. These discussions might be on price speculations or the technology behind the cryptocurrency. There might even be discussions on material found on other social media, like e.g. tweets or posts made on Facebook. 
+
+The well structured and publicly available content is also one of the main reasons why Reddit was chosen as source for the data instead of Facebook or Twitter. Next to the fact that the Reddit API was easier to use for this problem than the API from Twitter. Because the study was interested in data from months ago, it was quickly decided that Twitter and Facebook would fit as sources of the data. With Facebook the reason was that messages are often only shared between friends or group members of often private groups. With Twitter the reason was that their API only allowed to collect tweets from a few weeks ago. 
+
+
+
 <a name="reddit-footnote">1</a>: https://www.reddit.com/wiki/faq
 ## Crawling
 
