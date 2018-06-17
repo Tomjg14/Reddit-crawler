@@ -12,6 +12,13 @@ First, I will provide some more information on what data was collected, from whe
 
 ## The Data
 
+Before I start explaining what data was collected, I would like to explain for what purpose the data was collected. The data was collected as part of a master thesis that was focussed on the relationship between the fluctuation of several cryptocurrencies and the daily sentiment on social media related to those cryptocurrencies. 
+
+To be able to perform such a study, different sorts of data from different sources should be collected. For example, daily cryptocurrency prices and daily social media comments. This blog will only go into more detail on how the daily social media comments were collected. 
+
+As mentioned above, the social media of interest of this blog is the well known forum site named Reddit. Reddit is 'a source for what's new and popular on the web'. It is a site were the users provide the conent and decide via voting what is good or bad.<sup>[1](#reddit-footnote)</sup>
+
+<a name="reddit-footnote">1</a>: https://www.reddit.com/wiki/faq
 ## Crawling
 
 ## Preprocessing
