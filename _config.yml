@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+title: 'Reddit Crawler'
+description: ''
+logo: 'images/crypto-logo.jpg'
+show_downloads: 'true'
