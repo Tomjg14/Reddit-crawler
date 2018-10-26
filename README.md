@@ -24,7 +24,9 @@ There exist different subreddits dedicated to those cryptocurrencies and some ev
 
 The well structured and publicly available content is also one of the main reasons why Reddit was chosen as source for the data instead of Facebook or Twitter. Next to the fact that the Reddit API was easier to use. Because the study was interested in data from months ago, it was quickly decided that Twitter and Facebook were not suitable. With Facebook the reason was that messages are often only shared between friends or group members of often private groups and there was no quarantee that this was on a daily basis. With Twitter the reason was that their API only allowed to collect tweets from a few weeks ago. This left us with Reddit as the main source of data. 
 
-For this blog, user comments published on the daily discussion of Bitcoin, Ethereum, and Litecoin were collected. To be more precise: the subreddits BitcoinMarkets<sup>[2](#bitcoin-footnote)</sup>, EthTrader<sup>[3](#eth-footnote)</sup>, and LitecoinMarkets<sup>[4](#litecoin-footnote)</sup> were targeted. 
+For this blog, user comments published on the daily discussion of Bitcoin, Ethereum, and Litecoin were collected. To be more precise: the subreddits BitcoinMarkets<sup>[2](#bitcoin-footnote)</sup>, EthTrader<sup>[3](#eth-footnote)</sup>, and LitecoinMarkets<sup>[4](#litecoin-footnote)</sup> were targeted. The focus was on comments made in the period from September 1st 2017 till May 8th 2018.
+
+The current Reddit API does not allow for specific time interval data collection and only allows data from around ten days ago to be gathered. However, an user of the Reddit API can provide the API with a discussion ID for which the comments need to be collected. This is the reason that some custom external code<sup>[5](#pushshift-footnote)</sup> had to be used to gather the daily discussion IDS for the specified period of time, which could then be used in combination with the Reddit API for the comment crawling.
 
 <a name="reddit-footnote">1</a>: https://www.reddit.com/wiki/faq
 
@@ -33,6 +35,8 @@ For this blog, user comments published on the daily discussion of Bitcoin, Ether
 <a name="eth-footnote">3</a>: https://www.reddit.com/r/EthTrader/
 
 <a name="litecoin-footnote">4</a>: https://www.reddit.com/r/LitecoinMarkets/
+
+<a name="pushshift-footnote">5</a>: https://github.com/pushshift/api
 
 ## Crawling
 
