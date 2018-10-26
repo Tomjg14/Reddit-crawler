@@ -44,4 +44,16 @@ The current Reddit API does not allow for specific time interval data collection
 
 ## Preprocessing
 
+While a daily discussion is started automatically every day, the daily discussions are not closed when a day is finished. This means that people could and did still post comments while the next daily discussion was already opened. Comments made on a daily discussion, but after the day had finished, were note collected for this blog. Furthermore, as a lot of comments were either meaningless as they contained only a few words or as some were simply spam. Therefore, only the top 10 comments per day were collected. The comments were sorted based on the amount of points they scored, which is based on the amount of _likes_ they get from other users. The top 10 comments were then cleaned by removing hyperlinks, punctuation, newlines, and other non alphabetic symbols aside from digits. 
+
 ## Sentiment Analysis
+
+After these preprocessing steps, the comments were fed to a sentimetn analyser. For this blog, the python library NLTK<sup>[7](#nltk-footnote)</sup> was used in order to perform the sentiment analysis. This means that no custom sentiment analyzer was constructed and trained. To be more precise, the sentiment package VADER was used which stands for Valene Aware Dictionary and sEntiment Reasoner<sup>[8](#vader-footnote)</sup>. 
+
+This package belongs to the type of sentiment analysis that is based on lexicons of sentiment related words. So this means that in the lexicon, each word gets a rating on whether it is positive or negative and sometimes how positive or negative. So if VADER is used for sentiment analysis, it checks the input text to see if any of the words in the text are present in the lexicon. it then produces four sentiment metrics from the word ratings. These are positive, neutral, negative and the compound score. The compound score is the sum of all lexcion ratings of the text which is then also standardised to range between -1 and 1. 
+
+For this blog, I decided to map the compound score to a range between 0 and 1. Where 0 is very negative and 1 is positive. Aside from simply matching words in the text with terms in the lexicon, VADER also considers writing style. Like capitalisation which increases intensity of positive or negative words. But also the words in fron of a specific term like with "extremely bad" or "kinda bad". Finally, it also changes intensity of sentiment when the text includes the word "but". The sentiment of the part after the term "but" is wieghted more heavily than the part in front of the "but".
+
+<a name="nltk-footnote">7</a>: https://www.nltk.org/api/nltk.sentiment.html; https://github.com/nltk/nltk
+
+<a name="vader-footnote">8</a>: http://t-redactyl.io/blog/2017/04/using-vader-to-handle-sentiment-analysis-with-social-media-text.html
