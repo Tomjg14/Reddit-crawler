@@ -48,7 +48,7 @@ While a daily discussion is started automatically every day, the daily discussio
 
 ## Sentiment Analysis
 
-After these preprocessing steps, the comments were fed to a sentimetn analyser. For this blog, the python library NLTK<sup>[7](#nltk-footnote)</sup> was used in order to perform the sentiment analysis. This means that no custom sentiment analyzer was constructed and trained. To be more precise, the sentiment package VADER was used which stands for Valene Aware Dictionary and sEntiment Reasoner<sup>[8](#vader-footnote)</sup>. 
+After these preprocessing steps, the comments were fed to a sentiment analyser. For this blog, the python library NLTK<sup>[7](#nltk-footnote)</sup> was used in order to perform the sentiment analysis. This means that no custom sentiment analyzer was constructed and trained. To be more precise, the sentiment package VADER was used which stands for Valene Aware Dictionary and sEntiment Reasoner<sup>[8](#vader-footnote)</sup>. 
 
 This package belongs to the type of sentiment analysis that is based on lexicons of sentiment related words. So this means that in the lexicon, each word gets a rating on whether it is positive or negative and sometimes how positive or negative. So if VADER is used for sentiment analysis, it checks the input text to see if any of the words in the text are present in the lexicon. it then produces four sentiment metrics from the word ratings. These are positive, neutral, negative and the compound score. The compound score is the sum of all lexcion ratings of the text which is then also standardised to range between -1 and 1. 
 
