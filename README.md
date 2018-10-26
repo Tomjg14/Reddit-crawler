@@ -27,8 +27,11 @@ The well structured and publicly available content is also one of the main reaso
 For this blog, user comments published on the daily discussion of Bitcoin, Ethereum, and Litecoin were collected. To be more precise: the subreddits BitcoinMarkets<sup>[2](#bitcoin-footnote)</sup>, EthTrader<sup>[3](#eth-footnote)</sup>, and LitecoinMarkets<sup>[4](#litecoin-footnote)</sup> were targeted. 
 
 <a name="reddit-footnote">1</a>: https://www.reddit.com/wiki/faq
+
 <a name="bitcoin-footnote">2</a>: https://www.reddit.com/r/BitcoinMarkets/
+
 <a name="eth-footnote">3</a>: https://www.reddit.com/r/EthTrader/
+
 <a name="litecoin-footnote">4</a>: https://www.reddit.com/r/LitecoinMarkets/
 
 ## Crawling
