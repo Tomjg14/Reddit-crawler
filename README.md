@@ -36,11 +36,11 @@ For this blog, user comments published on the daily discussion of Bitcoin, Ether
 
 ## Crawling
 
-The current Reddit API does not allow for specific time interval data collection and only allows data from around ten days ago to be gathered. However, an user of the Reddit API can provide the API with a discussion ID for which the comments need to be collected. This is the reason that some custom external code<sup>[5](#pushshift-footnote)</sup> had to be used to gather the daily discussion IDS for the specified period of time, which could then be used in combination with the Reddit API for the comment crawling.
-
-
+The current Reddit API does not allow for specific time interval data collection and only allows data from around ten days ago to be gathered. However, an user of the Reddit API can provide the API with a discussion ID for which the comments need to be collected. This is the reason that some custom external code named _pushshift_ had to be used to gather the daily discussion IDS for the specified period of time, which could then be used in combination with the Reddit API for the comment crawling. Below the link to the external git can be found that explains in more detail how to collect the submission/discussion ID's by using their code<sup>[5](#pushshift-footnote)</sup>. Moreover, I have written a script named _submissionIDCollector.py_ that makes use of the pushshift api and is easy to use. One only needs to specify the date from which the reddit comments should be collected in UNIx Timestamp format<sup>[6](#unix-footnote)</sup>, the subreddit and a query which for this blog was "/daily_discussion" for the BitcoinMarkets subreddit. This query thus specifies that we are looking for daily discussion submissions and the specific query might differ per subreddit.
 
 <a name="pushshift-footnote">5</a>: https://github.com/pushshift/api
+
+<a name="unix-footnote">6</a>: https://www.epochconverter.com/
 
 ## Preprocessing
 
