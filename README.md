@@ -26,21 +26,21 @@ The well structured and publicly available content is also one of the main reaso
 
 For this blog, user comments published on the daily discussion of Bitcoin, Ethereum, and Litecoin were collected. To be more precise: the subreddits BitcoinMarkets<sup>[2](#bitcoin-footnote)</sup>, EthTrader<sup>[3](#eth-footnote)</sup>, and LitecoinMarkets<sup>[4](#litecoin-footnote)</sup> were targeted. The focus was on comments made in the period from September 1st 2017 till May 8th 2018.
 
-<a name="reddit-footnote">1</a>: https://www.reddit.com/wiki/faq
+<a name="reddit-footnote">1</a>: [https://www.reddit.com/wiki/faq](https://www.reddit.com/wiki/faq)
 
-<a name="bitcoin-footnote">2</a>: https://www.reddit.com/r/BitcoinMarkets/
+<a name="bitcoin-footnote">2</a>: [https://www.reddit.com/r/BitcoinMarkets/](https://www.reddit.com/r/BitcoinMarkets/)
 
-<a name="eth-footnote">3</a>: https://www.reddit.com/r/EthTrader/
+<a name="eth-footnote">3</a>: [https://www.reddit.com/r/EthTrader/](https://www.reddit.com/r/EthTrader/)
 
-<a name="litecoin-footnote">4</a>: https://www.reddit.com/r/LitecoinMarkets/
+<a name="litecoin-footnote">4</a>: [https://www.reddit.com/r/LitecoinMarkets/](https://www.reddit.com/r/LitecoinMarkets/)
 
 ## Crawling
 
 The current Reddit API does not allow for specific time interval data collection and only allows data from around ten days ago to be gathered. However, an user of the Reddit API can provide the API with a discussion ID for which the comments need to be collected. This is the reason that some custom external code named _pushshift_ had to be used to gather the daily discussion IDS for the specified period of time, which could then be used in combination with the Reddit API for the comment crawling. Below the link to the external git can be found that explains in more detail how to collect the submission/discussion ID's by using their code<sup>[5](#pushshift-footnote)</sup>. Moreover, I have written a script named _submissionIDCollector.py_ that makes use of the pushshift api and is easy to use. One only needs to specify the date from which the reddit comments should be collected in UNIx Timestamp format<sup>[6](#unix-footnote)</sup>, the subreddit and a query which for this blog was "/daily_discussion" for the BitcoinMarkets subreddit. This query thus specifies that we are looking for daily discussion submissions and the specific query might differ per subreddit.
 
-<a name="pushshift-footnote">5</a>: https://github.com/pushshift/api
+<a name="pushshift-footnote">5</a>: [https://github.com/pushshift/api](https://github.com/pushshift/api)
 
-<a name="unix-footnote">6</a>: https://www.epochconverter.com/
+<a name="unix-footnote">6</a>: [https://www.epochconverter.com/](https://www.epochconverter.com/)
 
 ## Preprocessing
 
@@ -54,6 +54,6 @@ This package belongs to the type of sentiment analysis that is based on lexicons
 
 For this blog, I decided to map the compound score to a range between 0 and 1. Where 0 is very negative and 1 is positive. Aside from simply matching words in the text with terms in the lexicon, VADER also considers writing style. Like capitalisation which increases intensity of positive or negative words. But also the words in fron of a specific term like with "extremely bad" or "kinda bad". Finally, it also changes intensity of sentiment when the text includes the word "but". The sentiment of the part after the term "but" is wieghted more heavily than the part in front of the "but".
 
-<a name="nltk-footnote">7</a>: https://www.nltk.org/api/nltk.sentiment.html; https://github.com/nltk/nltk
+<a name="nltk-footnote">7</a>: [https://www.nltk.org/api/nltk.sentiment.html](https://www.nltk.org/api/nltk.sentiment.html); [https://github.com/nltk/nltk](https://github.com/nltk/nltk)
 
-<a name="vader-footnote">8</a>: http://t-redactyl.io/blog/2017/04/using-vader-to-handle-sentiment-analysis-with-social-media-text.html
+<a name="vader-footnote">8</a>: [http://t-redactyl.io/blog/2017/04/using-vader-to-handle-sentiment-analysis-with-social-media-text.html](http://t-redactyl.io/blog/2017/04/using-vader-to-handle-sentiment-analysis-with-social-media-text.html)
