@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
 title: 'Reddit Crawler'
-description: ''
+description: 'This repository is on the collection of comments from Reddit and how to work with those comments to perform sentiment analysis.'
 logo: 'images/crypto_image.jpg'
 show_downloads: 'true'
